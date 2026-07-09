@@ -43,10 +43,7 @@ npm start
 
 ## Attribution
 
-This project was started from a public React food-delivery template and has been heavily modified. Original template reference: https://github.com/selvin-paul-raj/React_Food_Delivery (original author: @selvin-paul-raj). All edits and current code are by @diyaverma0416.
+This project was started from a public React food-delivery template as an inspiration and chance to start something on my own. All edits and current code are by @diyaverma0416.
 
 If you are the original author and would prefer different attribution or license handling, please open an issue or contact me and I will update the README accordingly.
 
-## License
-
-This repository does not include a bundled license. If you reuse code from elsewhere, please ensure you follow the original project's license terms. If you want this repository to carry an explicit license, add a LICENSE file or contact me for details.
