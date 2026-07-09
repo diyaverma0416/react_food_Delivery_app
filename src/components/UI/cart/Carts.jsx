@@ -9,7 +9,7 @@ import { cartUiActions } from "../../../store/shopping-cart/cartUiSlice";
 
 import "../../../styles/shopping-cart.css";
 
-const Carts = () => {
+const CartOverlay = () => {
   const dispatch = useDispatch();
   const cartProducts = useSelector((state) => state.cart.cartItems);
   const totalAmount = useSelector((state) => state.cart.totalAmount);
@@ -18,17 +18,17 @@ const Carts = () => {
     dispatch(cartUiActions.toggle());
   };
   return (
-    <div className="cart__container">
-      <ListGroup className="cart">
-        <div className="cart__close">
+    <div className="cart-container">
+      <ListGroup className="cart-panel">
+        <div className="cart-close">
           <span onClick={toggleCart}>
-            <i class="ri-close-fill"></i>
+            <i className="ri-close-fill" />
           </span>
         </div>
 
-        <div className="cart__item-list">
+        <div className="cart-item-list">
           {cartProducts.length === 0 ? (
-            <h6 className="text-center mt-5">No item added to the cart</h6>
+            <h6 className="text-center mt-5">Your cart is empty</h6>
           ) : (
             cartProducts.map((item, index) => (
               <CartItem item={item} key={index} />
@@ -36,9 +36,9 @@ const Carts = () => {
           )}
         </div>
 
-        <div className="cart__bottom d-flex align-items-center justify-content-between">
+        <div className="cart-bottom d-flex align-items-center justify-content-between">
           <h6>
-            Subtotal : <span>₹{totalAmount}</span>
+            Subtotal: <span>₹{totalAmount}</span>
           </h6>
           <button>
             <Link to="/checkout" onClick={toggleCart}>
@@ -51,4 +51,4 @@ const Carts = () => {
   );
 };
 
-export default Carts;
+export default CartOverlay;
