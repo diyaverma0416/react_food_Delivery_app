@@ -1,42 +1,52 @@
-## Food Ordering App
+# React Food Delivery App
 
-### Features:
+A responsive food-ordering frontend built with React and Redux Toolkit. This project implements a shopping cart, product listing with filters, product pages, and a checkout flow. The focus is on a clean, minimal UI and modular components so you can adapt or extend the app easily.
 
----
+## Highlights
 
-##### Here's features included in this project
-
-- Add to cart functionality
-- Shopping cart functionality
-- Product Filtering functionality
-- Product page
+- Add to cart and cart overlay
+- Product listing and filtering
+- Product detail pages
 - Cart and checkout page
-- Contact page
-- Login and Register page
-- Awesome modern minimalist UI
+- Authentication-ready routes (login/register placeholders)
+- Responsive design (mobile-first)
 
-### Technologies Used:
+## Tech stack
 
----
+- React 17
+- Redux Toolkit
+- React Router DOM
+- Reactstrap + Bootstrap 5
+- Slick carousel, RemixIcon
 
-1. React.js
-2. Redux Toolkit
-3. ReactStrap
-4. CSS
+## Quick start
 
-### How to start?
+1. Install dependencies:
 
----
-
-##### To start the project along with me just download the start-up file and run available script
-
-```javascript
-// first install all necessary dependencies
-
-npm i
-
-// next run
-
-npm start
-
+```bash
+npm install
 ```
+
+2. Start the dev server:
+
+```bash
+npm start
+```
+
+3. Open http://localhost:3000 in your browser.
+
+## Project structure (short)
+
+- src/components — UI components (Header, Footer, Cart, etc.)
+- src/pages — route pages
+- src/store — Redux slices and store
+
+## Attribution
+
+This project was started from a public React food-delivery template and has been heavily modified. Original template reference: https://github.com/selvin-paul-raj/React_Food_Delivery (original author: @selvin-paul-raj). All edits and current code are by @diyaverma0416.
+
+If you are the original author and would prefer different attribution or license handling, please open an issue or contact me and I will update the README accordingly.
+
+## License
+
+This repository does not include a bundled license. If you reuse code from elsewhere, please ensure you follow the original project's license terms. If you want this repository to carry an explicit license, add a LICENSE file or contact me for details.
