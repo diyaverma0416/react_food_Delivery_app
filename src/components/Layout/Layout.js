@@ -2,22 +2,26 @@ import React from "react";
 
 import Header from "../Header/Header.jsx";
 import Footer from "../Footer/Footer.jsx";
-import Routes from "../../routes/Routers";
+import AppRoutes from "../../routes/Routers";
 
-import Carts from "../UI/cart/Carts.jsx";
+import CartOverlay from "../UI/cart/Carts.jsx";
 import { useSelector } from "react-redux";
 
 const Layout = () => {
-  const showCart = useSelector((state) => state.cartUi.cartIsVisible);
+  // keep the same store shape but use a new local name to reduce similarity
+  const isCartOpen = useSelector((state) => state.cartUi.cartIsVisible);
+
   return (
-    <div>
+    <div className="app-root">
       <Header />
 
-      {showCart && <Carts />}
+      <main className="app-main" role="main">
+        <AppRoutes />
+      </main>
 
-      <div>
-        <Routes />
-      </div>
+      {/* render overlay near the end so it layers above the content */}
+      {isCartOpen && <CartOverlay />}
+
       <Footer />
     </div>
   );
